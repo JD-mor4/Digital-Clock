@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width:30%;
+            height:200px;
+            border-radius: 15px;
+            background-color: black;
+            color: red;
+            font-size: 20px;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            margin-top: 50px;
+        }
+        
+    @media (max-width:670px){
+        .main{
+            width:100%;
+            margin: auto;
+
+        }
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <br>
+        
+        <h1 id="clk"></h1>
+        <h1 id="date"></h1>
+
+       
+        <script>
+            setInterval(clock,1000)
+            function clock(){
+                var d = new Date()
+                var t=d.toLocaleTimeString()
+                document.getElementById("clk").innerHTML= t
+                
+                var dt = new Date()
+                var u=dt.getDate()+ '-' + dt.getMonth()  + '-' + dt.getFullYear()
+                document.getElementById("date").innerHTML=u
+            }
+        </script>
+        
+
+        
+
+    </div>
+</body>
+</html>
